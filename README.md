@@ -1,3 +1,15 @@
+<p align="center">
+  <img src="banner.png" width="100%">
+</p>
+
+<h1 align="center">AIDEA</h1>
+
+<p align="center">
+Artificial Intelligence Driven Electronic Design Automation Platform
+</p>
+
+
+
 # ⚡ AI-Driven EDA Tool for RTL Analysis & Verification
 
 > An AI-powered Electronic Design Automation (EDA) assistant that automates Verilog analysis, debugging, and simulation using a **local LLM (Ollama)** with a **Flask-based backend pipeline**.
