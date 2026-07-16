@@ -1,7 +1,7 @@
 # 🚀 AIDEA - Artificial Intelligence Driven Electronic Design Automation
 
 <p align="center">
-  <img src="Images/AI-Driven EDA platform infographic.png" width="100%">
+  <img src="AI-Driven EDA platform infographic.png" width="100%">
 </p>
 
 <h1 align="center">AIDEA</h1>
