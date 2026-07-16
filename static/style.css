@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(135deg, #1a1f2e, #0f172a);
+    color: #e2e8f0;
+}
+
+/* CENTER MAIN */
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* vertical center */
+    align-items: center;       /* horizontal center */
+    text-align: center;
+}
+
+/* TITLE */
+h1 {
+    color: #38bdf8;
+    margin-bottom: 20px;
+}
+
+/* INPUTS */
+input[type="file"] {
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 420px;
+    height: 120px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    background: #020617;
+    color: #e2e8f0;
+}
+
+/* BUTTON */
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #38bdf8;
+    border: none;
+    color: black;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0ea5e9;
+}
+
+/* DIVIDER */
+.divider {
+    margin: 10px;
+    color: #94a3b8;
+}
+
+/* OUTPUT AREA */
+#output {
+    padding: 20px;
+}
+
+/* PANELS */
+.panel {
+    background: #1e293b;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+/* TABLE */
+.eda-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.eda-table th, .eda-table td {
+    border: 1px solid #334155;
+    padding: 8px;
+}
+
+/* AI */
+.ai-card {
+    background: #334155;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+
+/* NETLIST */
+.netlist-box {
+    background: black;
+    padding: 10px;
+    white-space: pre-wrap;
+}

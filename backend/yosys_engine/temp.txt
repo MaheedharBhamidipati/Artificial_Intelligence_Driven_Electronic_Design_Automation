@@ -1,0 +1,35 @@
+import subprocess
+import os
+
+def generate_json_netlist(verilog_file, top_module):
+
+    yosys_script = f"""
+    read_verilog {verilog_file}
+
+    hierarchy -check -top {top_module}
+
+    proc
+    opt
+
+    fsm
+    opt
+
+    memory
+    opt
+
+    techmap
+    opt
+
+    write_json netlist.json
+    """
+
+    with open("temp.ys", "w") as f:
+        f.write(yosys_script)
+
+    result = subprocess.run(
+        ["yosys", "temp.ys"],
+        capture_output=True,
+        text=True
+    )
+
+    return result.stdout, result.stderr

@@ -1,0 +1,161 @@
+from graphviz import Digraph
+import re
+import os
+
+# =========================================================
+# PATH SETUP
+# =========================================================
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(os.path.dirname(BASE_DIR))
+STATIC_PATH = os.path.join(PROJECT_ROOT, "static")
+
+os.makedirs(STATIC_PATH, exist_ok=True)
+
+
+# =========================================================
+# 🔍 FIND TOP MODULE (ROBUST)
+# =========================================================
+def find_top_module(code):
+    modules = re.findall(r'module\s+(\w+)', code)
+    instantiated = re.findall(r'(\w+)\s+\w+\s*\(', code)
+
+    # remove duplicates
+    instantiated = list(set(instantiated))
+
+    top_modules = [m for m in modules if m not in instantiated]
+
+    if top_modules:
+        return top_modules[-1]
+
+    return modules[-1] if modules else "MODULE"
+
+
+# =========================================================
+# 🔍 EXTRACT PORTS (ONLY FROM TOP MODULE)
+# =========================================================
+def extract_ports(code, module_name):
+
+    pattern = rf'module\s+{module_name}\s*\((.*?)\);'
+    match = re.search(pattern, code, re.DOTALL)
+
+    if not match:
+        return [], []
+
+    port_block = match.group(1)
+
+    inputs = re.findall(r'input\s+(\w+)', port_block)
+    outputs = re.findall(r'output\s+(\w+)', port_block)
+
+    return inputs, outputs
+
+
+# =========================================================
+# 🔍 FIND SUBMODULE INSTANCES (ONLY INSIDE TOP MODULE)
+# =========================================================
+def find_instances(code, module_name):
+
+    pattern = rf'module\s+{module_name}.*?endmodule'
+    match = re.search(pattern, code, re.DOTALL)
+
+    if not match:
+        return []
+
+    body = match.group()
+
+    instances = re.findall(r'(\w+)\s+(\w+)\s*\(', body)
+
+    clean = []
+    for mod, inst in instances:
+        if mod.lower() not in ["module", "input", "output", "wire", "reg"]:
+            clean.append((mod, inst))
+
+    return clean
+
+
+# =========================================================
+# 🧠 MAIN GENERATOR (GENERIC)
+# =========================================================
+def generate_circuit_diagram(code, filename="circuit"):
+
+    dot = Digraph(format='png')
+    dot.attr(rankdir='LR', bgcolor="#0f172a")
+
+    # -------------------------------------
+    # TOP MODULE
+    # -------------------------------------
+    top_module = find_top_module(code)
+
+    # -------------------------------------
+    # PORTS
+    # -------------------------------------
+    inputs, outputs = extract_ports(code, top_module)
+
+    # classify clock/reset
+    clk = [i for i in inputs if "clk" in i.lower()]
+    rst = [i for i in inputs if "rst" in i.lower()]
+    normal_inputs = [i for i in inputs if i not in clk + rst]
+
+    # -------------------------------------
+    # MAIN BLOCK
+    # -------------------------------------
+    dot.node(
+        top_module,
+        top_module.upper(),
+        shape="box",
+        style="filled",
+        fillcolor="#1e293b",
+        fontcolor="white",
+        fontsize="16"
+    )
+
+    # -------------------------------------
+    # INPUTS (LEFT)
+    # -------------------------------------
+    for i in normal_inputs:
+        dot.node(i, i, shape="circle")
+        dot.edge(i, top_module)
+
+    # CLOCK (TOP)
+    for c in clk:
+        dot.node(c, c, shape="circle", color="blue")
+        dot.edge(c, top_module)
+
+    # RESET (BOTTOM)
+    for r in rst:
+        dot.node(r, r, shape="circle", color="red")
+        dot.edge(r, top_module)
+
+    # -------------------------------------
+    # OUTPUTS (RIGHT)
+    # -------------------------------------
+    for o in outputs:
+        dot.node(o, o, shape="circle")
+        dot.edge(top_module, o)
+
+    # -------------------------------------
+    # SUBMODULES (OPTIONAL, CLEAN)
+    # -------------------------------------
+    instances = find_instances(code, top_module)
+
+    if instances:
+        with dot.subgraph(name="cluster_submodules") as s:
+            s.attr(label="SUBMODULES", color="white")
+
+            for mod, inst in instances:
+                s.node(
+                    inst,
+                    mod.upper(),
+                    shape="box",
+                    style="filled",
+                    fillcolor="#334155",
+                    fontcolor="white"
+                )
+                dot.edge(top_module, inst)
+
+    # -------------------------------------
+    # SAVE
+    # -------------------------------------
+    output_path = os.path.join(STATIC_PATH, filename)
+    dot.render(output_path, cleanup=True)
+
+    return f"{output_path}.png"

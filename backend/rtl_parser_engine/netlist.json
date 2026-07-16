@@ -1,0 +1,22 @@
+{
+    "design_name": "example.v",
+    "gates": [
+        {
+            "gate_id": "GATE_0",
+            "output": "sum",
+            "gate_type": "XOR",
+            "inputs": [
+                "a",
+                "b"
+            ]
+        },
+        {
+            "gate_id": "GATE_1",
+            "output": "z",
+            "gate_type": "BUFFER",
+            "inputs": [
+                "temp"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,60 @@
+# OSS CAD Suite
+oss-cad-suite/
+oss-cad-suite*.exe
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Temporary parser files
+temp_pyverilog/
+parser.out
+parsetab.py
+
+# Generated outputs
+runs/
+static/generated/
+*.vcd
+*.log
+*.pdf
+
+# IDE
+.vscode/
+.idea/
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Environment
+.env
+
+# Icarus Verilog
+iverilog/
+iverilog*.exe
+
+# Installers
+installs/
+*.msi
+*.zip
+*.7z
+
+# Videos
+*.mp4
+
+# Large PDFs (optional)
+sample_reports/
+
+# Graphviz binaries
+Graphviz/
+
+# AI Models
+models/
+
+# Images (optional - remove if you want to version them)
+Images/
+
+# Windows
+desktop.ini
+

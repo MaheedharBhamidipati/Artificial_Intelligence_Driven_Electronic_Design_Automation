@@ -1,0 +1,909 @@
+
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="4000"
+            height="3000"
+            viewBox="0 0 4000 3000"
+            style="background:#f8fafc"
+        >
+
+        <defs>
+
+            <marker
+                id="arrow"
+                markerWidth="10"
+                markerHeight="10"
+                refX="10"
+                refY="5"
+                orient="auto"
+            >
+
+                <polygon
+                    points="0 0, 10 5, 0 10"
+                    fill="#16a34a"
+                />
+
+            </marker>
+
+        </defs>
+
+        
+            <rect
+                x="150"
+                y="150"
+                width="140"
+                height="60"
+                rx="12"
+                fill="#2563eb"
+                stroke="black"
+                stroke-width="2"
+            />
+
+            <text
+                x="220"
+                y="185"
+                text-anchor="middle"
+                fill="white"
+                font-size="18"
+                font-weight="bold"
+            >
+                A
+            </text>
+            
+            <rect
+                x="150"
+                y="290"
+                width="140"
+                height="60"
+                rx="12"
+                fill="#2563eb"
+                stroke="black"
+                stroke-width="2"
+            />
+
+            <text
+                x="220"
+                y="325"
+                text-anchor="middle"
+                fill="white"
+                font-size="18"
+                font-weight="bold"
+            >
+                B
+            </text>
+            
+            <rect
+                x="150"
+                y="430"
+                width="140"
+                height="60"
+                rx="12"
+                fill="#2563eb"
+                stroke="black"
+                stroke-width="2"
+            />
+
+            <text
+                x="220"
+                y="465"
+                text-anchor="middle"
+                fill="white"
+                font-size="18"
+                font-weight="bold"
+            >
+                CIN
+            </text>
+            
+            <circle
+                cx="160"
+                cy="580"
+                r="10"
+                fill="#6b7280"
+            />
+
+            <text
+                x="175"
+                y="585"
+                font-size="14"
+                font-weight="bold"
+            >
+                A[0]
+            </text>
+            
+            <circle
+                cx="160"
+                cy="720"
+                r="10"
+                fill="#6b7280"
+            />
+
+            <text
+                x="175"
+                y="725"
+                font-size="14"
+                font-weight="bold"
+            >
+                B[0]
+            </text>
+            
+            <circle
+                cx="160"
+                cy="860"
+                r="10"
+                fill="#6b7280"
+            />
+
+            <text
+                x="175"
+                y="865"
+                font-size="14"
+                font-weight="bold"
+            >
+                A[1]
+            </text>
+            
+            <circle
+                cx="160"
+                cy="1000"
+                r="10"
+                fill="#6b7280"
+            />
+
+            <text
+                x="175"
+                y="1005"
+                font-size="14"
+                font-weight="bold"
+            >
+                B[1]
+            </text>
+            
+            <circle
+                cx="160"
+                cy="1140"
+                r="10"
+                fill="#6b7280"
+            />
+
+            <text
+                x="175"
+                y="1145"
+                font-size="14"
+                font-weight="bold"
+            >
+                A[2]
+            </text>
+            
+            <circle
+                cx="160"
+                cy="1280"
+                r="10"
+                fill="#6b7280"
+            />
+
+            <text
+                x="175"
+                y="1285"
+                font-size="14"
+                font-weight="bold"
+            >
+                B[2]
+            </text>
+            
+            <circle
+                cx="160"
+                cy="1420"
+                r="10"
+                fill="#6b7280"
+            />
+
+            <text
+                x="175"
+                y="1425"
+                font-size="14"
+                font-weight="bold"
+            >
+                A[3]
+            </text>
+            
+            <circle
+                cx="160"
+                cy="1560"
+                r="10"
+                fill="#6b7280"
+            />
+
+            <text
+                x="175"
+                y="1565"
+                font-size="14"
+                font-weight="bold"
+            >
+                B[3]
+            </text>
+            
+            <ellipse
+                cx="520"
+                cy="185"
+                rx="70"
+                ry="35"
+                fill="#8b5cf6"
+                stroke="black"
+                stroke-width="2"
+            />
+
+            <text
+                x="520"
+                y="190"
+                text-anchor="middle"
+                fill="white"
+                font-size="16"
+                font-weight="bold"
+            >
+                ASSIGN
+            </text>
+            
+            <ellipse
+                cx="520"
+                cy="325"
+                rx="70"
+                ry="35"
+                fill="#8b5cf6"
+                stroke="black"
+                stroke-width="2"
+            />
+
+            <text
+                x="520"
+                y="330"
+                text-anchor="middle"
+                fill="white"
+                font-size="16"
+                font-weight="bold"
+            >
+                ASSIGN
+            </text>
+            
+            <rect
+                x="450"
+                y="430"
+                width="180"
+                height="90"
+                rx="15"
+                fill="#f59e0b"
+                stroke="black"
+                stroke-width="3"
+            />
+
+            <text
+                x="540"
+                y="465"
+                text-anchor="middle"
+                font-size="18"
+                font-weight="bold"
+            >
+                FULL_ADDER
+            </text>
+
+            <text
+                x="540"
+                y="495"
+                text-anchor="middle"
+                font-size="15"
+            >
+                FA0
+            </text>
+            
+            <rect
+                x="750"
+                y="150"
+                width="140"
+                height="60"
+                rx="12"
+                fill="#10b981"
+                stroke="black"
+                stroke-width="2"
+            />
+
+            <text
+                x="820"
+                y="185"
+                text-anchor="middle"
+                fill="white"
+                font-size="18"
+                font-weight="bold"
+            >
+                SUM
+            </text>
+            
+            <circle
+                cx="760"
+                cy="300"
+                r="10"
+                fill="#6b7280"
+            />
+
+            <text
+                x="775"
+                y="305"
+                font-size="14"
+                font-weight="bold"
+            >
+                SUM[0]
+            </text>
+            
+            <circle
+                cx="760"
+                cy="440"
+                r="10"
+                fill="#6b7280"
+            />
+
+            <text
+                x="775"
+                y="445"
+                font-size="14"
+                font-weight="bold"
+            >
+                C1
+            </text>
+            
+            <rect
+                x="1050"
+                y="150"
+                width="180"
+                height="90"
+                rx="15"
+                fill="#f59e0b"
+                stroke="black"
+                stroke-width="3"
+            />
+
+            <text
+                x="1140"
+                y="185"
+                text-anchor="middle"
+                font-size="18"
+                font-weight="bold"
+            >
+                FULL_ADDER
+            </text>
+
+            <text
+                x="1140"
+                y="215"
+                text-anchor="middle"
+                font-size="15"
+            >
+                FA1
+            </text>
+            
+            <circle
+                cx="1360"
+                cy="160"
+                r="10"
+                fill="#6b7280"
+            />
+
+            <text
+                x="1375"
+                y="165"
+                font-size="14"
+                font-weight="bold"
+            >
+                SUM[1]
+            </text>
+            
+            <circle
+                cx="1360"
+                cy="300"
+                r="10"
+                fill="#6b7280"
+            />
+
+            <text
+                x="1375"
+                y="305"
+                font-size="14"
+                font-weight="bold"
+            >
+                C2
+            </text>
+            
+            <rect
+                x="1650"
+                y="150"
+                width="180"
+                height="90"
+                rx="15"
+                fill="#f59e0b"
+                stroke="black"
+                stroke-width="3"
+            />
+
+            <text
+                x="1740"
+                y="185"
+                text-anchor="middle"
+                font-size="18"
+                font-weight="bold"
+            >
+                FULL_ADDER
+            </text>
+
+            <text
+                x="1740"
+                y="215"
+                text-anchor="middle"
+                font-size="15"
+            >
+                FA2
+            </text>
+            
+            <circle
+                cx="1960"
+                cy="160"
+                r="10"
+                fill="#6b7280"
+            />
+
+            <text
+                x="1975"
+                y="165"
+                font-size="14"
+                font-weight="bold"
+            >
+                SUM[2]
+            </text>
+            
+            <circle
+                cx="1960"
+                cy="300"
+                r="10"
+                fill="#6b7280"
+            />
+
+            <text
+                x="1975"
+                y="305"
+                font-size="14"
+                font-weight="bold"
+            >
+                C3
+            </text>
+            
+            <rect
+                x="2250"
+                y="150"
+                width="180"
+                height="90"
+                rx="15"
+                fill="#f59e0b"
+                stroke="black"
+                stroke-width="3"
+            />
+
+            <text
+                x="2340"
+                y="185"
+                text-anchor="middle"
+                font-size="18"
+                font-weight="bold"
+            >
+                FULL_ADDER
+            </text>
+
+            <text
+                x="2340"
+                y="215"
+                text-anchor="middle"
+                font-size="15"
+            >
+                FA3
+            </text>
+            
+            <circle
+                cx="2560"
+                cy="160"
+                r="10"
+                fill="#6b7280"
+            />
+
+            <text
+                x="2575"
+                y="165"
+                font-size="14"
+                font-weight="bold"
+            >
+                SUM[3]
+            </text>
+            
+            <rect
+                x="2550"
+                y="290"
+                width="140"
+                height="60"
+                rx="12"
+                fill="#10b981"
+                stroke="black"
+                stroke-width="2"
+            />
+
+            <text
+                x="2620"
+                y="325"
+                text-anchor="middle"
+                fill="white"
+                font-size="18"
+                font-weight="bold"
+            >
+                COUT
+            </text>
+            
+            <path
+                d="
+                M290,185
+                L370,185
+                L370,185
+                L450,185
+                "
+                fill="none"
+                stroke="#16a34a"
+                stroke-width="4"
+                marker-end="url(#arrow)"
+            />
+            
+            <path
+                d="
+                M290,185
+                L370,185
+                L370,325
+                L450,325
+                "
+                fill="none"
+                stroke="#16a34a"
+                stroke-width="4"
+                marker-end="url(#arrow)"
+            />
+            
+            <path
+                d="
+                M290,325
+                L370,325
+                L370,185
+                L450,185
+                "
+                fill="none"
+                stroke="#16a34a"
+                stroke-width="4"
+                marker-end="url(#arrow)"
+            />
+            
+            <path
+                d="
+                M290,325
+                L370,325
+                L370,325
+                L450,325
+                "
+                fill="none"
+                stroke="#16a34a"
+                stroke-width="4"
+                marker-end="url(#arrow)"
+            />
+            
+            <path
+                d="
+                M290,465
+                L370,465
+                L370,185
+                L450,185
+                "
+                fill="none"
+                stroke="#16a34a"
+                stroke-width="4"
+                marker-end="url(#arrow)"
+            />
+            
+            <path
+                d="
+                M290,465
+                L370,465
+                L370,325
+                L450,325
+                "
+                fill="none"
+                stroke="#16a34a"
+                stroke-width="4"
+                marker-end="url(#arrow)"
+            />
+            
+            <path
+                d="
+                M290,465
+                L370,465
+                L370,465
+                L450,465
+                "
+                fill="none"
+                stroke="#16a34a"
+                stroke-width="4"
+                marker-end="url(#arrow)"
+            />
+            
+            <path
+                d="
+                M890,465
+                L970,465
+                L970,185
+                L1050,185
+                "
+                fill="none"
+                stroke="#16a34a"
+                stroke-width="4"
+                marker-end="url(#arrow)"
+            />
+            
+            <path
+                d="
+                M1490,325
+                L1570,325
+                L1570,185
+                L1650,185
+                "
+                fill="none"
+                stroke="#16a34a"
+                stroke-width="4"
+                marker-end="url(#arrow)"
+            />
+            
+            <path
+                d="
+                M2090,325
+                L2170,325
+                L2170,185
+                L2250,185
+                "
+                fill="none"
+                stroke="#16a34a"
+                stroke-width="4"
+                marker-end="url(#arrow)"
+            />
+            
+            <path
+                d="
+                M590,185
+                L670,185
+                L670,185
+                L750,185
+                "
+                fill="none"
+                stroke="#16a34a"
+                stroke-width="4"
+                marker-end="url(#arrow)"
+            />
+            
+            <path
+                d="
+                M590,325
+                L1570,325
+                L1570,325
+                L2550,325
+                "
+                fill="none"
+                stroke="#16a34a"
+                stroke-width="4"
+                marker-end="url(#arrow)"
+            />
+            
+            <path
+                d="
+                M590,465
+                L670,465
+                L670,325
+                L750,325
+                "
+                fill="none"
+                stroke="#16a34a"
+                stroke-width="4"
+                marker-end="url(#arrow)"
+            />
+            
+            <path
+                d="
+                M590,465
+                L670,465
+                L670,465
+                L750,465
+                "
+                fill="none"
+                stroke="#16a34a"
+                stroke-width="4"
+                marker-end="url(#arrow)"
+            />
+            
+            <path
+                d="
+                M290,605
+                L370,605
+                L370,465
+                L450,465
+                "
+                fill="none"
+                stroke="#16a34a"
+                stroke-width="4"
+                marker-end="url(#arrow)"
+            />
+            
+            <path
+                d="
+                M290,745
+                L370,745
+                L370,465
+                L450,465
+                "
+                fill="none"
+                stroke="#16a34a"
+                stroke-width="4"
+                marker-end="url(#arrow)"
+            />
+            
+            <path
+                d="
+                M1190,185
+                L1270,185
+                L1270,185
+                L1350,185
+                "
+                fill="none"
+                stroke="#16a34a"
+                stroke-width="4"
+                marker-end="url(#arrow)"
+            />
+            
+            <path
+                d="
+                M1190,185
+                L1270,185
+                L1270,325
+                L1350,325
+                "
+                fill="none"
+                stroke="#16a34a"
+                stroke-width="4"
+                marker-end="url(#arrow)"
+            />
+            
+            <path
+                d="
+                M290,885
+                L670,885
+                L670,185
+                L1050,185
+                "
+                fill="none"
+                stroke="#16a34a"
+                stroke-width="4"
+                marker-end="url(#arrow)"
+            />
+            
+            <path
+                d="
+                M290,1025
+                L670,1025
+                L670,185
+                L1050,185
+                "
+                fill="none"
+                stroke="#16a34a"
+                stroke-width="4"
+                marker-end="url(#arrow)"
+            />
+            
+            <path
+                d="
+                M1790,185
+                L1870,185
+                L1870,185
+                L1950,185
+                "
+                fill="none"
+                stroke="#16a34a"
+                stroke-width="4"
+                marker-end="url(#arrow)"
+            />
+            
+            <path
+                d="
+                M1790,185
+                L1870,185
+                L1870,325
+                L1950,325
+                "
+                fill="none"
+                stroke="#16a34a"
+                stroke-width="4"
+                marker-end="url(#arrow)"
+            />
+            
+            <path
+                d="
+                M290,1165
+                L970,1165
+                L970,185
+                L1650,185
+                "
+                fill="none"
+                stroke="#16a34a"
+                stroke-width="4"
+                marker-end="url(#arrow)"
+            />
+            
+            <path
+                d="
+                M290,1305
+                L970,1305
+                L970,185
+                L1650,185
+                "
+                fill="none"
+                stroke="#16a34a"
+                stroke-width="4"
+                marker-end="url(#arrow)"
+            />
+            
+            <path
+                d="
+                M2390,185
+                L2470,185
+                L2470,185
+                L2550,185
+                "
+                fill="none"
+                stroke="#16a34a"
+                stroke-width="4"
+                marker-end="url(#arrow)"
+            />
+            
+            <path
+                d="
+                M2390,185
+                L2470,185
+                L2470,325
+                L2550,325
+                "
+                fill="none"
+                stroke="#16a34a"
+                stroke-width="4"
+                marker-end="url(#arrow)"
+            />
+            
+            <path
+                d="
+                M290,1445
+                L1270,1445
+                L1270,185
+                L2250,185
+                "
+                fill="none"
+                stroke="#16a34a"
+                stroke-width="4"
+                marker-end="url(#arrow)"
+            />
+            
+            <path
+                d="
+                M290,1585
+                L1270,1585
+                L1270,185
+                L2250,185
+                "
+                fill="none"
+                stroke="#16a34a"
+                stroke-width="4"
+                marker-end="url(#arrow)"
+            />
+            
+
+        </svg>
+        

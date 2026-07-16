@@ -1,0 +1,367 @@
+
+    <svg xmlns="http://www.w3.org/2000/svg"
+         width="2000"
+         height="2000"
+         viewBox="0 0 2000 2000">
+
+         
+        <rect x="0"
+              y="0"
+              width="140"
+              height="80"
+              fill="white"
+              stroke="black"
+              stroke-width="2"/>
+        
+        <text x="10"
+              y="25"
+              font-size="14"
+              font-weight="bold">
+              band_splitter
+        </text>
+        
+        <text x="10"
+              y="50"
+              font-size="12">
+              bs
+        </text>
+        
+        <rect x="0"
+              y="180"
+              width="140"
+              height="80"
+              fill="white"
+              stroke="black"
+              stroke-width="2"/>
+        
+        <text x="10"
+              y="205"
+              font-size="14"
+              font-weight="bold">
+              subband_splitter
+        </text>
+        
+        <text x="10"
+              y="230"
+              font-size="12">
+              sA
+        </text>
+        
+        <rect x="0"
+              y="360"
+              width="140"
+              height="80"
+              fill="white"
+              stroke="black"
+              stroke-width="2"/>
+        
+        <text x="10"
+              y="385"
+              font-size="14"
+              font-weight="bold">
+              subband_splitter
+        </text>
+        
+        <text x="10"
+              y="410"
+              font-size="12">
+              sB
+        </text>
+        
+        <rect x="0"
+              y="540"
+              width="140"
+              height="80"
+              fill="white"
+              stroke="black"
+              stroke-width="2"/>
+        
+        <text x="10"
+              y="565"
+              font-size="14"
+              font-weight="bold">
+              subband_splitter
+        </text>
+        
+        <text x="10"
+              y="590"
+              font-size="12">
+              sC
+        </text>
+        
+        <rect x="0"
+              y="720"
+              width="140"
+              height="80"
+              fill="white"
+              stroke="black"
+              stroke-width="2"/>
+        
+        <text x="10"
+              y="745"
+              font-size="14"
+              font-weight="bold">
+              subband_splitter
+        </text>
+        
+        <text x="10"
+              y="770"
+              font-size="12">
+              sD
+        </text>
+        
+        <rect x="0"
+              y="900"
+              width="140"
+              height="80"
+              fill="white"
+              stroke="black"
+              stroke-width="2"/>
+        
+        <text x="10"
+              y="925"
+              font-size="14"
+              font-weight="bold">
+              pwm_generator
+        </text>
+        
+        <text x="10"
+              y="950"
+              font-size="12">
+              p0
+        </text>
+        
+        <rect x="0"
+              y="1080"
+              width="140"
+              height="80"
+              fill="white"
+              stroke="black"
+              stroke-width="2"/>
+        
+        <text x="10"
+              y="1105"
+              font-size="14"
+              font-weight="bold">
+              pwm_generator
+        </text>
+        
+        <text x="10"
+              y="1130"
+              font-size="12">
+              p1
+        </text>
+        
+        <rect x="0"
+              y="1260"
+              width="140"
+              height="80"
+              fill="white"
+              stroke="black"
+              stroke-width="2"/>
+        
+        <text x="10"
+              y="1285"
+              font-size="14"
+              font-weight="bold">
+              pwm_generator
+        </text>
+        
+        <text x="10"
+              y="1310"
+              font-size="12">
+              p2
+        </text>
+        
+        <rect x="0"
+              y="1440"
+              width="140"
+              height="80"
+              fill="white"
+              stroke="black"
+              stroke-width="2"/>
+        
+        <text x="10"
+              y="1465"
+              font-size="14"
+              font-weight="bold">
+              pwm_generator
+        </text>
+        
+        <text x="10"
+              y="1490"
+              font-size="12">
+              p3
+        </text>
+        
+        <rect x="0"
+              y="1620"
+              width="140"
+              height="80"
+              fill="white"
+              stroke="black"
+              stroke-width="2"/>
+        
+        <text x="10"
+              y="1645"
+              font-size="14"
+              font-weight="bold">
+              pwm_generator
+        </text>
+        
+        <text x="10"
+              y="1670"
+              font-size="12">
+              p4
+        </text>
+        
+        <rect x="0"
+              y="1800"
+              width="140"
+              height="80"
+              fill="white"
+              stroke="black"
+              stroke-width="2"/>
+        
+        <text x="10"
+              y="1825"
+              font-size="14"
+              font-weight="bold">
+              pwm_generator
+        </text>
+        
+        <text x="10"
+              y="1850"
+              font-size="12">
+              p5
+        </text>
+        
+        <rect x="0"
+              y="1980"
+              width="140"
+              height="80"
+              fill="white"
+              stroke="black"
+              stroke-width="2"/>
+        
+        <text x="10"
+              y="2005"
+              font-size="14"
+              font-weight="bold">
+              pwm_generator
+        </text>
+        
+        <text x="10"
+              y="2030"
+              font-size="12">
+              p6
+        </text>
+        
+        <rect x="0"
+              y="2160"
+              width="140"
+              height="80"
+              fill="white"
+              stroke="black"
+              stroke-width="2"/>
+        
+        <text x="10"
+              y="2185"
+              font-size="14"
+              font-weight="bold">
+              pwm_generator
+        </text>
+        
+        <text x="10"
+              y="2210"
+              font-size="12">
+              p7
+        </text>
+        
+        <rect x="0"
+              y="2340"
+              width="140"
+              height="80"
+              fill="white"
+              stroke="black"
+              stroke-width="2"/>
+        
+        <text x="10"
+              y="2365"
+              font-size="14"
+              font-weight="bold">
+              pwm_generator
+        </text>
+        
+        <text x="10"
+              y="2390"
+              font-size="12">
+              p8
+        </text>
+        
+        <rect x="0"
+              y="2520"
+              width="140"
+              height="80"
+              fill="white"
+              stroke="black"
+              stroke-width="2"/>
+        
+        <text x="10"
+              y="2545"
+              font-size="14"
+              font-weight="bold">
+              pwm_generator
+        </text>
+        
+        <text x="10"
+              y="2570"
+              font-size="12">
+              p9
+        </text>
+        
+        <rect x="0"
+              y="2700"
+              width="140"
+              height="80"
+              fill="white"
+              stroke="black"
+              stroke-width="2"/>
+        
+        <text x="10"
+              y="2725"
+              font-size="14"
+              font-weight="bold">
+              pwm_generator
+        </text>
+        
+        <text x="10"
+              y="2750"
+              font-size="12">
+              p10
+        </text>
+        
+        <rect x="0"
+              y="2880"
+              width="140"
+              height="80"
+              fill="white"
+              stroke="black"
+              stroke-width="2"/>
+        
+        <text x="10"
+              y="2905"
+              font-size="14"
+              font-weight="bold">
+              pwm_generator
+        </text>
+        
+        <text x="10"
+              y="2930"
+              font-size="12">
+              p11
+        </text>
+        
+
+    </svg>
+    

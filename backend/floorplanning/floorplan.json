@@ -1,0 +1,1922 @@
+{
+    "chip": {
+        "width": 36.0,
+        "height": 36.0
+    },
+    "macros": [
+        {
+            "name": "Sequential Block",
+            "type": "Sequential",
+            "x": 8.0,
+            "y": 22.012,
+            "width": 2.0,
+            "height": 2.0,
+            "orientation": "E",
+            "domain": "PD_0.80V",
+            "cells": [
+                "REGIN_DFF_0",
+                "REGIN_DFF_1",
+                "REGIN_DFF_2",
+                "REGIN_DFF_3",
+                "REGIN_DFF_4",
+                "REGIN_DFF_5",
+                "REGIN_DFF_6",
+                "REGIN_DFF_7",
+                "REGOUT_DFF_0",
+                "REGOUT_DFF_1",
+                "REGOUT_DFF_2",
+                "REGOUT_DFF_3"
+            ]
+        },
+        {
+            "name": "Arithmetic Block",
+            "type": "Arithmetic",
+            "x": 8.0,
+            "y": 26.0,
+            "width": 2.0,
+            "height": 2.0,
+            "orientation": "N",
+            "domain": "PD_0.80V",
+            "cells": [
+                "ALU_ADDER_0",
+                "ALU_ADDER_1",
+                "ALU_ADDER_2",
+                "ALU_ADDER_3",
+                "ALU_ADDER_4",
+                "ALU_ADDER_5"
+            ]
+        },
+        {
+            "name": "MUX Block",
+            "type": "MUX",
+            "x": 8.0,
+            "y": 19.012,
+            "width": 2.0,
+            "height": 2.0,
+            "orientation": "N",
+            "domain": "PD_0.80V",
+            "cells": [
+                "MUX_SEL_0",
+                "MUX_SEL_1",
+                "MUX_SEL_2",
+                "MUX_SEL_3"
+            ]
+        },
+        {
+            "name": "Memory Block",
+            "type": "Memory",
+            "x": 8.0,
+            "y": 24.401,
+            "width": 2.0,
+            "height": 2.0,
+            "orientation": "N",
+            "domain": "PD_0.72V",
+            "cells": [
+                "MAIN_RAM"
+            ]
+        },
+        {
+            "name": "Logic Block",
+            "type": "Logic",
+            "x": 8.0,
+            "y": 16.622,
+            "width": 2.0,
+            "height": 2.0,
+            "orientation": "N",
+            "domain": "PD_0.80V",
+            "cells": [
+                "GLUE_XOR_0",
+                "GLUE_XOR_1",
+                "GLUE_XOR_2"
+            ]
+        }
+    ],
+    "utilization": 1.54,
+    "dead_space": 98.46,
+    "estimated_wirelength": 299.896,
+    "power_domains": {
+        "domains": [
+            {
+                "name": "PD_0.72V",
+                "voltage": 0.72,
+                "x": 8.0,
+                "y": 24.401,
+                "width": 2.0,
+                "height": 2.0,
+                "macros": [
+                    "Memory Block"
+                ]
+            },
+            {
+                "name": "PD_0.80V",
+                "voltage": 0.8,
+                "x": 8.0,
+                "y": 16.622,
+                "width": 2.0,
+                "height": 11.378,
+                "macros": [
+                    "Sequential Block",
+                    "Arithmetic Block",
+                    "MUX Block",
+                    "Logic Block"
+                ]
+            }
+        ],
+        "boundary_cells": [
+            {
+                "kind": "level_shifter",
+                "x": 9.0,
+                "y": 24.206,
+                "from_domain": "PD_0.80V",
+                "to_domain": "PD_0.72V"
+            },
+            {
+                "kind": "level_shifter",
+                "x": 9.0,
+                "y": 26.2,
+                "from_domain": "PD_0.80V",
+                "to_domain": "PD_0.72V"
+            }
+        ]
+    },
+    "power_plan": {
+        "rings": [
+            {
+                "net": "VDD",
+                "x": 9.0,
+                "y": 9.0,
+                "width": 18.0,
+                "height": 18.0,
+                "ring_width": 2.0,
+                "layer": "M8"
+            },
+            {
+                "net": "VSS",
+                "x": 12.5,
+                "y": 12.5,
+                "width": 11.0,
+                "height": 11.0,
+                "ring_width": 2.0,
+                "layer": "M8"
+            }
+        ],
+        "stripes": [
+            {
+                "net": "VDD",
+                "x": 17.5,
+                "y": 9.0,
+                "width": 1.0,
+                "height": 18.0,
+                "layer": "M6"
+            },
+            {
+                "net": "VDD",
+                "x": 9.0,
+                "y": 17.5,
+                "width": 18.0,
+                "height": 1.0,
+                "layer": "M6"
+            }
+        ],
+        "vias": [
+            {
+                "net": "VDD",
+                "x": 18.0,
+                "y": 10.0,
+                "layer_from": "M6",
+                "layer_to": "M8"
+            },
+            {
+                "net": "VDD",
+                "x": 18.0,
+                "y": 26.0,
+                "layer_from": "M6",
+                "layer_to": "M8"
+            },
+            {
+                "net": "VDD",
+                "x": 10.0,
+                "y": 18.0,
+                "layer_from": "M6",
+                "layer_to": "M8"
+            },
+            {
+                "net": "VDD",
+                "x": 26.0,
+                "y": 18.0,
+                "layer_from": "M6",
+                "layer_to": "M8"
+            },
+            {
+                "net": "VDD",
+                "x": 18.0,
+                "y": 18.0,
+                "layer_from": "M6",
+                "layer_to": "M6"
+            }
+        ]
+    },
+    "blockages": {
+        "placement_blockages": [
+            {
+                "kind": "hard",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 36.0,
+                "height": 5.0,
+                "max_density": 0.0,
+                "source": "io_keepout"
+            },
+            {
+                "kind": "hard",
+                "x": 0.0,
+                "y": 31.0,
+                "width": 36.0,
+                "height": 5.0,
+                "max_density": 0.0,
+                "source": "io_keepout"
+            },
+            {
+                "kind": "hard",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 5.0,
+                "height": 36.0,
+                "max_density": 0.0,
+                "source": "io_keepout"
+            },
+            {
+                "kind": "hard",
+                "x": 31.0,
+                "y": 0.0,
+                "width": 5.0,
+                "height": 36.0,
+                "max_density": 0.0,
+                "source": "io_keepout"
+            },
+            {
+                "kind": "hard",
+                "x": 6.0,
+                "y": 20.012,
+                "width": 6.0,
+                "height": 1.999,
+                "max_density": 0.0,
+                "source": "macro_halo"
+            },
+            {
+                "kind": "hard",
+                "x": 6.0,
+                "y": 24.013,
+                "width": 6.0,
+                "height": 1.999,
+                "max_density": 0.0,
+                "source": "macro_halo"
+            },
+            {
+                "kind": "hard",
+                "x": 6.0,
+                "y": 22.011,
+                "width": 1.999,
+                "height": 2.002,
+                "max_density": 0.0,
+                "source": "macro_halo"
+            },
+            {
+                "kind": "hard",
+                "x": 10.001,
+                "y": 22.011,
+                "width": 1.999,
+                "height": 2.002,
+                "max_density": 0.0,
+                "source": "macro_halo"
+            },
+            {
+                "kind": "hard",
+                "x": 6.0,
+                "y": 24.0,
+                "width": 6.0,
+                "height": 1.999,
+                "max_density": 0.0,
+                "source": "macro_halo"
+            },
+            {
+                "kind": "hard",
+                "x": 6.0,
+                "y": 28.001,
+                "width": 6.0,
+                "height": 1.999,
+                "max_density": 0.0,
+                "source": "macro_halo"
+            },
+            {
+                "kind": "hard",
+                "x": 6.0,
+                "y": 25.999,
+                "width": 1.999,
+                "height": 2.002,
+                "max_density": 0.0,
+                "source": "macro_halo"
+            },
+            {
+                "kind": "hard",
+                "x": 10.001,
+                "y": 25.999,
+                "width": 1.999,
+                "height": 2.002,
+                "max_density": 0.0,
+                "source": "macro_halo"
+            },
+            {
+                "kind": "hard",
+                "x": 6.0,
+                "y": 17.012,
+                "width": 6.0,
+                "height": 1.999,
+                "max_density": 0.0,
+                "source": "macro_halo"
+            },
+            {
+                "kind": "hard",
+                "x": 6.0,
+                "y": 21.013,
+                "width": 6.0,
+                "height": 1.999,
+                "max_density": 0.0,
+                "source": "macro_halo"
+            },
+            {
+                "kind": "hard",
+                "x": 6.0,
+                "y": 19.011,
+                "width": 1.999,
+                "height": 2.002,
+                "max_density": 0.0,
+                "source": "macro_halo"
+            },
+            {
+                "kind": "hard",
+                "x": 10.001,
+                "y": 19.011,
+                "width": 1.999,
+                "height": 2.002,
+                "max_density": 0.0,
+                "source": "macro_halo"
+            },
+            {
+                "kind": "hard",
+                "x": 6.0,
+                "y": 22.401,
+                "width": 6.0,
+                "height": 1.999,
+                "max_density": 0.0,
+                "source": "macro_halo"
+            },
+            {
+                "kind": "hard",
+                "x": 6.0,
+                "y": 26.402,
+                "width": 6.0,
+                "height": 1.999,
+                "max_density": 0.0,
+                "source": "macro_halo"
+            },
+            {
+                "kind": "hard",
+                "x": 6.0,
+                "y": 24.4,
+                "width": 1.999,
+                "height": 2.002,
+                "max_density": 0.0,
+                "source": "macro_halo"
+            },
+            {
+                "kind": "hard",
+                "x": 10.001,
+                "y": 24.4,
+                "width": 1.999,
+                "height": 2.002,
+                "max_density": 0.0,
+                "source": "macro_halo"
+            },
+            {
+                "kind": "hard",
+                "x": 6.0,
+                "y": 14.622,
+                "width": 6.0,
+                "height": 1.999,
+                "max_density": 0.0,
+                "source": "macro_halo"
+            },
+            {
+                "kind": "hard",
+                "x": 6.0,
+                "y": 18.623,
+                "width": 6.0,
+                "height": 1.999,
+                "max_density": 0.0,
+                "source": "macro_halo"
+            },
+            {
+                "kind": "hard",
+                "x": 6.0,
+                "y": 16.621,
+                "width": 1.999,
+                "height": 2.002,
+                "max_density": 0.0,
+                "source": "macro_halo"
+            },
+            {
+                "kind": "hard",
+                "x": 10.001,
+                "y": 16.621,
+                "width": 1.999,
+                "height": 2.002,
+                "max_density": 0.0,
+                "source": "macro_halo"
+            }
+        ],
+        "routing_blockages": [
+            {
+                "layer": "M1",
+                "x": 8.0,
+                "y": 22.012,
+                "width": 2.0,
+                "height": 2.0,
+                "source": "macro_shadow"
+            },
+            {
+                "layer": "M2",
+                "x": 8.0,
+                "y": 22.012,
+                "width": 2.0,
+                "height": 2.0,
+                "source": "macro_shadow"
+            },
+            {
+                "layer": "M3",
+                "x": 8.0,
+                "y": 22.012,
+                "width": 2.0,
+                "height": 2.0,
+                "source": "macro_shadow"
+            },
+            {
+                "layer": "M1",
+                "x": 8.0,
+                "y": 26.0,
+                "width": 2.0,
+                "height": 2.0,
+                "source": "macro_shadow"
+            },
+            {
+                "layer": "M2",
+                "x": 8.0,
+                "y": 26.0,
+                "width": 2.0,
+                "height": 2.0,
+                "source": "macro_shadow"
+            },
+            {
+                "layer": "M3",
+                "x": 8.0,
+                "y": 26.0,
+                "width": 2.0,
+                "height": 2.0,
+                "source": "macro_shadow"
+            },
+            {
+                "layer": "M1",
+                "x": 8.0,
+                "y": 19.012,
+                "width": 2.0,
+                "height": 2.0,
+                "source": "macro_shadow"
+            },
+            {
+                "layer": "M2",
+                "x": 8.0,
+                "y": 19.012,
+                "width": 2.0,
+                "height": 2.0,
+                "source": "macro_shadow"
+            },
+            {
+                "layer": "M3",
+                "x": 8.0,
+                "y": 19.012,
+                "width": 2.0,
+                "height": 2.0,
+                "source": "macro_shadow"
+            },
+            {
+                "layer": "M1",
+                "x": 8.0,
+                "y": 24.401,
+                "width": 2.0,
+                "height": 2.0,
+                "source": "macro_shadow"
+            },
+            {
+                "layer": "M2",
+                "x": 8.0,
+                "y": 24.401,
+                "width": 2.0,
+                "height": 2.0,
+                "source": "macro_shadow"
+            },
+            {
+                "layer": "M3",
+                "x": 8.0,
+                "y": 24.401,
+                "width": 2.0,
+                "height": 2.0,
+                "source": "macro_shadow"
+            },
+            {
+                "layer": "M1",
+                "x": 8.0,
+                "y": 16.622,
+                "width": 2.0,
+                "height": 2.0,
+                "source": "macro_shadow"
+            },
+            {
+                "layer": "M2",
+                "x": 8.0,
+                "y": 16.622,
+                "width": 2.0,
+                "height": 2.0,
+                "source": "macro_shadow"
+            },
+            {
+                "layer": "M3",
+                "x": 8.0,
+                "y": 16.622,
+                "width": 2.0,
+                "height": 2.0,
+                "source": "macro_shadow"
+            }
+        ]
+    },
+    "congestion": {
+        "grid_cols": 10,
+        "grid_rows": 10,
+        "bin_width": 2.0,
+        "bin_height": 2.0,
+        "max_congestion": 0.5943,
+        "bins": [
+            {
+                "x": 8.0,
+                "y": 8.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 10.0,
+                "y": 8.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 12.0,
+                "y": 8.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 14.0,
+                "y": 8.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 16.0,
+                "y": 8.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 31.5,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 18.0,
+                "y": 8.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 31.5,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 20.0,
+                "y": 8.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 22.0,
+                "y": 8.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 24.0,
+                "y": 8.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 26.0,
+                "y": 8.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 8.0,
+                "y": 10.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 10.0,
+                "y": 10.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 12.0,
+                "y": 10.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 14.0,
+                "y": 10.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 16.0,
+                "y": 10.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 31.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 18.0,
+                "y": 10.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 31.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 20.0,
+                "y": 10.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 22.0,
+                "y": 10.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 24.0,
+                "y": 10.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 26.0,
+                "y": 10.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 8.0,
+                "y": 12.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 10.0,
+                "y": 12.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 12.0,
+                "y": 12.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 14.0,
+                "y": 12.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 16.0,
+                "y": 12.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 31.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 18.0,
+                "y": 12.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 31.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 20.0,
+                "y": 12.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 22.0,
+                "y": 12.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 24.0,
+                "y": 12.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 26.0,
+                "y": 12.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 8.0,
+                "y": 14.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 10.0,
+                "y": 14.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 12.0,
+                "y": 14.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 14.0,
+                "y": 14.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 16.0,
+                "y": 14.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 31.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 18.0,
+                "y": 14.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 31.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 20.0,
+                "y": 14.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 22.0,
+                "y": 14.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 24.0,
+                "y": 14.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 26.0,
+                "y": 14.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 8.0,
+                "y": 16.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 2.067,
+                "supply": 23.232,
+                "congestion": 0.089,
+                "hotspot": false
+            },
+            {
+                "x": 10.0,
+                "y": 16.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 31.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 12.0,
+                "y": 16.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 31.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 14.0,
+                "y": 16.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 31.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 16.0,
+                "y": 16.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 30.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 18.0,
+                "y": 16.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 30.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 20.0,
+                "y": 16.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 31.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 22.0,
+                "y": 16.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 31.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 24.0,
+                "y": 16.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 31.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 26.0,
+                "y": 16.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 31.5,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 8.0,
+                "y": 18.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 2.909,
+                "supply": 21.84,
+                "congestion": 0.1332,
+                "hotspot": false
+            },
+            {
+                "x": 10.0,
+                "y": 18.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 31.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 12.0,
+                "y": 18.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 31.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 14.0,
+                "y": 18.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 31.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 16.0,
+                "y": 18.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 30.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 18.0,
+                "y": 18.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 30.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 20.0,
+                "y": 18.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 31.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 22.0,
+                "y": 18.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 31.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 24.0,
+                "y": 18.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 31.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 26.0,
+                "y": 18.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 31.5,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 8.0,
+                "y": 20.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 2.024,
+                "supply": 25.928,
+                "congestion": 0.0781,
+                "hotspot": false
+            },
+            {
+                "x": 10.0,
+                "y": 20.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 12.0,
+                "y": 20.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 14.0,
+                "y": 20.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 16.0,
+                "y": 20.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 31.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 18.0,
+                "y": 20.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 31.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 20.0,
+                "y": 20.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 22.0,
+                "y": 20.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 24.0,
+                "y": 20.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 26.0,
+                "y": 20.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 8.0,
+                "y": 22.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 11.928,
+                "supply": 20.072,
+                "congestion": 0.5943,
+                "hotspot": false
+            },
+            {
+                "x": 10.0,
+                "y": 22.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 12.0,
+                "y": 22.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 14.0,
+                "y": 22.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 16.0,
+                "y": 22.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 31.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 18.0,
+                "y": 22.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 31.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 20.0,
+                "y": 22.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 22.0,
+                "y": 22.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 24.0,
+                "y": 22.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 26.0,
+                "y": 22.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 8.0,
+                "y": 24.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.8715,
+                "supply": 22.334,
+                "congestion": 0.039,
+                "hotspot": false
+            },
+            {
+                "x": 10.0,
+                "y": 24.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 12.0,
+                "y": 24.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 14.0,
+                "y": 24.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 16.0,
+                "y": 24.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 31.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 18.0,
+                "y": 24.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 31.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 20.0,
+                "y": 24.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 22.0,
+                "y": 24.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 24.0,
+                "y": 24.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 26.0,
+                "y": 24.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 8.0,
+                "y": 26.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 6.2005,
+                "supply": 20.0,
+                "congestion": 0.31,
+                "hotspot": false
+            },
+            {
+                "x": 10.0,
+                "y": 26.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 12.0,
+                "y": 26.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 14.0,
+                "y": 26.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 16.0,
+                "y": 26.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 31.5,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 18.0,
+                "y": 26.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 31.5,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 20.0,
+                "y": 26.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 22.0,
+                "y": 26.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 24.0,
+                "y": 26.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            },
+            {
+                "x": 26.0,
+                "y": 26.0,
+                "width": 2.0,
+                "height": 2.0,
+                "demand": 0.0,
+                "supply": 32.0,
+                "congestion": 0.0,
+                "hotspot": false
+            }
+        ]
+    },
+    "macro_netlist": {
+        "nets": [
+            {
+                "name": "alu_sum_0",
+                "kind": "data",
+                "macros": [
+                    "Arithmetic Block",
+                    "MUX Block"
+                ],
+                "weight": 2.0
+            },
+            {
+                "name": "alu_sum_1",
+                "kind": "data",
+                "macros": [
+                    "Arithmetic Block",
+                    "MUX Block"
+                ],
+                "weight": 2.0
+            },
+            {
+                "name": "alu_sum_2",
+                "kind": "data",
+                "macros": [
+                    "Arithmetic Block",
+                    "MUX Block"
+                ],
+                "weight": 3.0
+            },
+            {
+                "name": "alu_sum_3",
+                "kind": "data",
+                "macros": [
+                    "Arithmetic Block",
+                    "MUX Block"
+                ],
+                "weight": 3.0
+            },
+            {
+                "name": "alu_sum_4",
+                "kind": "data",
+                "macros": [
+                    "Arithmetic Block",
+                    "MUX Block"
+                ],
+                "weight": 2.0
+            },
+            {
+                "name": "alu_sum_5",
+                "kind": "data",
+                "macros": [
+                    "Arithmetic Block",
+                    "MUX Block"
+                ],
+                "weight": 2.0
+            },
+            {
+                "name": "clk",
+                "kind": "clock",
+                "macros": [
+                    "Memory Block",
+                    "Sequential Block"
+                ],
+                "weight": 13.0
+            },
+            {
+                "name": "mux_out_0",
+                "kind": "data",
+                "macros": [
+                    "MUX Block",
+                    "Sequential Block"
+                ],
+                "weight": 2.0
+            },
+            {
+                "name": "mux_out_1",
+                "kind": "data",
+                "macros": [
+                    "MUX Block",
+                    "Sequential Block"
+                ],
+                "weight": 2.0
+            },
+            {
+                "name": "mux_out_2",
+                "kind": "data",
+                "macros": [
+                    "MUX Block",
+                    "Sequential Block"
+                ],
+                "weight": 2.0
+            },
+            {
+                "name": "mux_out_3",
+                "kind": "data",
+                "macros": [
+                    "MUX Block",
+                    "Sequential Block"
+                ],
+                "weight": 2.0
+            },
+            {
+                "name": "regin_q_0",
+                "kind": "data",
+                "macros": [
+                    "Arithmetic Block",
+                    "Sequential Block"
+                ],
+                "weight": 2.0
+            },
+            {
+                "name": "regin_q_1",
+                "kind": "data",
+                "macros": [
+                    "Arithmetic Block",
+                    "Sequential Block"
+                ],
+                "weight": 3.0
+            },
+            {
+                "name": "regin_q_2",
+                "kind": "data",
+                "macros": [
+                    "Arithmetic Block",
+                    "Sequential Block"
+                ],
+                "weight": 3.0
+            },
+            {
+                "name": "regin_q_3",
+                "kind": "data",
+                "macros": [
+                    "Arithmetic Block",
+                    "Sequential Block"
+                ],
+                "weight": 3.0
+            },
+            {
+                "name": "regin_q_4",
+                "kind": "data",
+                "macros": [
+                    "Arithmetic Block",
+                    "Sequential Block"
+                ],
+                "weight": 3.0
+            },
+            {
+                "name": "regin_q_5",
+                "kind": "data",
+                "macros": [
+                    "Arithmetic Block",
+                    "Sequential Block"
+                ],
+                "weight": 3.0
+            },
+            {
+                "name": "regin_q_6",
+                "kind": "data",
+                "macros": [
+                    "Arithmetic Block",
+                    "Sequential Block"
+                ],
+                "weight": 2.0
+            },
+            {
+                "name": "regin_q_7",
+                "kind": "data",
+                "macros": [
+                    "Memory Block",
+                    "Sequential Block"
+                ],
+                "weight": 2.0
+            },
+            {
+                "name": "regout_q_0",
+                "kind": "data",
+                "macros": [
+                    "Logic Block",
+                    "Memory Block",
+                    "Sequential Block"
+                ],
+                "weight": 3.0
+            },
+            {
+                "name": "regout_q_1",
+                "kind": "data",
+                "macros": [
+                    "Logic Block",
+                    "Sequential Block"
+                ],
+                "weight": 3.0
+            },
+            {
+                "name": "regout_q_2",
+                "kind": "data",
+                "macros": [
+                    "Logic Block",
+                    "Sequential Block"
+                ],
+                "weight": 3.0
+            },
+            {
+                "name": "regout_q_3",
+                "kind": "data",
+                "macros": [
+                    "Logic Block",
+                    "Sequential Block"
+                ],
+                "weight": 2.0
+            }
+        ]
+    },
+    "clock_plan": {
+        "regions": [
+            {
+                "name": "CR_0_clk",
+                "clock_net": "clk",
+                "x": 8.0,
+                "y": 22.012,
+                "width": 2.0,
+                "height": 4.389,
+                "macros": [
+                    "Memory Block",
+                    "Sequential Block"
+                ],
+                "root_macro": "Sequential Block"
+            }
+        ],
+        "unrouted_clock_nets": []
+    },
+    "constraint_violations": [
+        "Sequential Block overlaps hard placement blockage (macro_halo) at (6.0, 24.0, 6.0x1.999)",
+        "Sequential Block overlaps hard placement blockage (macro_halo) at (6.0, 21.013, 6.0x1.999)",
+        "Sequential Block overlaps hard placement blockage (macro_halo) at (6.0, 22.401, 6.0x1.999)",
+        "Arithmetic Block overlaps hard placement blockage (macro_halo) at (6.0, 24.013, 6.0x1.999)",
+        "Arithmetic Block overlaps hard placement blockage (macro_halo) at (6.0, 26.402, 6.0x1.999)",
+        "MUX Block overlaps hard placement blockage (macro_halo) at (6.0, 20.012, 6.0x1.999)",
+        "MUX Block overlaps hard placement blockage (macro_halo) at (6.0, 18.623, 6.0x1.999)",
+        "Memory Block overlaps hard placement blockage (macro_halo) at (6.0, 24.013, 6.0x1.999)",
+        "Memory Block overlaps hard placement blockage (macro_halo) at (6.0, 24.0, 6.0x1.999)",
+        "Logic Block overlaps hard placement blockage (macro_halo) at (6.0, 17.012, 6.0x1.999)"
+    ],
+    "validation": {
+        "is_clean": false,
+        "issues": [
+            {
+                "severity": "error",
+                "category": "macro_overlap",
+                "message": "macro 'Arithmetic Block' overlaps macro 'Memory Block'"
+            },
+            {
+                "severity": "error",
+                "category": "blockage",
+                "message": "macro 'Sequential Block' overlaps hard placement blockage (macro_halo) at (6.0, 24.0, 6.0x1.999)"
+            },
+            {
+                "severity": "error",
+                "category": "blockage",
+                "message": "macro 'Sequential Block' overlaps hard placement blockage (macro_halo) at (6.0, 21.013, 6.0x1.999)"
+            },
+            {
+                "severity": "error",
+                "category": "blockage",
+                "message": "macro 'Sequential Block' overlaps hard placement blockage (macro_halo) at (6.0, 22.401, 6.0x1.999)"
+            },
+            {
+                "severity": "error",
+                "category": "blockage",
+                "message": "macro 'Arithmetic Block' overlaps hard placement blockage (macro_halo) at (6.0, 24.013, 6.0x1.999)"
+            },
+            {
+                "severity": "error",
+                "category": "blockage",
+                "message": "macro 'Arithmetic Block' overlaps hard placement blockage (macro_halo) at (6.0, 26.402, 6.0x1.999)"
+            },
+            {
+                "severity": "error",
+                "category": "blockage",
+                "message": "macro 'MUX Block' overlaps hard placement blockage (macro_halo) at (6.0, 20.012, 6.0x1.999)"
+            },
+            {
+                "severity": "error",
+                "category": "blockage",
+                "message": "macro 'MUX Block' overlaps hard placement blockage (macro_halo) at (6.0, 18.623, 6.0x1.999)"
+            },
+            {
+                "severity": "error",
+                "category": "blockage",
+                "message": "macro 'Memory Block' overlaps hard placement blockage (macro_halo) at (6.0, 24.013, 6.0x1.999)"
+            },
+            {
+                "severity": "error",
+                "category": "blockage",
+                "message": "macro 'Memory Block' overlaps hard placement blockage (macro_halo) at (6.0, 24.0, 6.0x1.999)"
+            },
+            {
+                "severity": "error",
+                "category": "blockage",
+                "message": "macro 'Logic Block' overlaps hard placement blockage (macro_halo) at (6.0, 17.012, 6.0x1.999)"
+            },
+            {
+                "severity": "error",
+                "category": "constraint",
+                "message": "Sequential Block overlaps hard placement blockage (macro_halo) at (6.0, 24.0, 6.0x1.999)"
+            },
+            {
+                "severity": "error",
+                "category": "constraint",
+                "message": "Sequential Block overlaps hard placement blockage (macro_halo) at (6.0, 21.013, 6.0x1.999)"
+            },
+            {
+                "severity": "error",
+                "category": "constraint",
+                "message": "Sequential Block overlaps hard placement blockage (macro_halo) at (6.0, 22.401, 6.0x1.999)"
+            },
+            {
+                "severity": "error",
+                "category": "constraint",
+                "message": "Arithmetic Block overlaps hard placement blockage (macro_halo) at (6.0, 24.013, 6.0x1.999)"
+            },
+            {
+                "severity": "error",
+                "category": "constraint",
+                "message": "Arithmetic Block overlaps hard placement blockage (macro_halo) at (6.0, 26.402, 6.0x1.999)"
+            },
+            {
+                "severity": "error",
+                "category": "constraint",
+                "message": "MUX Block overlaps hard placement blockage (macro_halo) at (6.0, 20.012, 6.0x1.999)"
+            },
+            {
+                "severity": "error",
+                "category": "constraint",
+                "message": "MUX Block overlaps hard placement blockage (macro_halo) at (6.0, 18.623, 6.0x1.999)"
+            },
+            {
+                "severity": "error",
+                "category": "constraint",
+                "message": "Memory Block overlaps hard placement blockage (macro_halo) at (6.0, 24.013, 6.0x1.999)"
+            },
+            {
+                "severity": "error",
+                "category": "constraint",
+                "message": "Memory Block overlaps hard placement blockage (macro_halo) at (6.0, 24.0, 6.0x1.999)"
+            },
+            {
+                "severity": "error",
+                "category": "constraint",
+                "message": "Logic Block overlaps hard placement blockage (macro_halo) at (6.0, 17.012, 6.0x1.999)"
+            }
+        ]
+    }
+}
